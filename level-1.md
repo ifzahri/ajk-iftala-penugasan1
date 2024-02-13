@@ -1,6 +1,6 @@
 # Level 1: Back to basic
 
-Penugasan
+## Penugasan
 ```
 Apa yang harus dikerjakan?
 1. Buat sebuah repository di GitHub. Nama repository dalam format ajk-[nama panggilan]-penugasan1. Repository ini juga sebagai tempat menaruh laporan pengerjaan untuk level selanjutnya.
@@ -24,3 +24,18 @@ Buat dokumentasi pengerjaan kalian (level-1.md) yang setidaknya meliputi:
 - Kondisi git graph (git log)
 - Kendala atau kesulitan
 ```
+## Jawaban
+Implementasi dari branching sendiri dapat dilakukan sebagai berikut
+
+1. Melakukan inisialisasi project menggunakan codebase yang ada, saya menggunakan codebase pribadi saya yaitu [Python Django Template](https://github.com/ifzahri/django-template)
+2. Membuat command git sesuai dengan ketentuan, dengan cara
+   ```bash
+   git checkout main
+   git checkout -b development
+   git checkout -b feature1-add-title
+   git checkout development
+   git checkout -b feature2-add-description
+   ```
+   Berikut adalah hasil eksekusi command diatas
+   ![Alt text](image.png)
+3. 
