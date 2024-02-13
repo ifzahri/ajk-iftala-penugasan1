@@ -37,7 +37,7 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
    git checkout -b feature2-add-description
    ```
    Berikut adalah hasil eksekusi command diatas
-   ![Branch on local](/src/docs/image.png)
+   ![Branch on local](/src/docs/image-5.png)
 
    Perubahan tersebut masih disimpan pada local changes, dan belum dapat terlihat di remote atau GitHub. Maka dari itu, perlu melakukan push pada tiap branchnya agar dapat terlihat di remote repository, dengan command sebagai berikut
    ```bash
