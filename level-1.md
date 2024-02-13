@@ -119,3 +119,12 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
 5. Untuk melakukan merge secara no fast forward atau `--no-ff` maka saya perlu meresolve conflict, dimana saya menggabungkan line pada `feature2-add-description` dan `feature1-add-title` dengan cara incoming first. Lalu, saya melakukan commit dan merge kedua feature ke branch `development`
    ![merging](/src/docs/image-9.png)
    ![no-fast-forward](/src/docs/image-10.png)
+<<<<<<< HEAD
+   Kemudian, saya memanfaatkan fitur Pull Request pada GitHub untuk menggabungkan branch `development` dengan `main`
+   ![PR](/src/docs/image-18.png)
+
+## Lampiran
+- Git log pada repository (menggunakan GitLens)
+![Log](/src/docs/image-17.png)
+=======
+>>>>>>> main
