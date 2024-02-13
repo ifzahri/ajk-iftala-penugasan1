@@ -48,20 +48,28 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
    ```
    Setelah itu, perubahan akan muncul pada remote
    ![Branch on remote](/src/docs/image-2.png)
+
 3. Seluruh kegiatan dibawah dilakukan pada branch `development`, berikut adalah contoh implementasi pada local tentang command-command git yang berkaitan
 - Pull
   
   Pull digunakan untuk mengambil konten dari remote dan melakukan update pada local untuk mencocokkan konten tersebut, command yang digunakan adalah
   `git pull origin main`.
+  ![pull](/src/docs/image-13.png)
+
 - Stash
   
   Stash digunakan untuk mentimpan perubahan sementara yang belum akan dicommit, yang mana nantinya akan di-apply perubahan yang terjadi, command yang digunakan untuk melakukan stash adalah `git stash`, dan untuk menyimpan perubahannya, dapat menggunakan `git stash apply`.
+  ![stash](/src/docs/image-15.png)
+
 - Reset
   
   Command reset dijadikan untuk membatalkan perubahan yang ada di working directory, untuk melakukan reset, maka bisa menggunakan `git reset --hard HEAD`, dimana `--hard` adalah opsi untuk merubah seluruh perubahan dan dikembalikan ke commit tertentu, dan `HEAD` sendiri sebagai penanda ke last commit terakhir pada branch directory.
+  ![reset](/src/docs/image-14.png)
+
 - Diff
   
   Diff adalah command untuk menunjukkan perubahan pada commit, antara kedua commit, dan staging changes.
+  ![diff](/src/docs/image-11.png)
 - Merge
   
   Merge digunakan untuk menggabungkan perubahan perubahan yang ada pada branch yang berbeda.
@@ -70,6 +78,7 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
   git merge feature1-add-title
   git merge feature2-add-description
   ```
+  ![merge branch](/src/docs/image-12.png)
 - Branch
   
   Branch adalah command untuk menampilkan daftar branch, membuat branch, dan melakukan delete branch
@@ -88,6 +97,7 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
 - Add
   
   `git add .` dijadikan command untuk menambahkan file yang telah dirubah pada local ke staging changes.
+  ![Add](/src/docs/image-16.png)
 
 - Commit
   
@@ -106,6 +116,6 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
   ![resolve](/src/docs/image-8.png)
    
 
-5. Untuk melakukan merge secara no fast forward atau `--no-ff` maka saya perlu meresolve conflict, dimana saya menggabungkan line pada feature2 dan feature1 dengan cara incoming first. Lalu, saya melakukan commit dan merge kedua feature ke branch development
+5. Untuk melakukan merge secara no fast forward atau `--no-ff` maka saya perlu meresolve conflict, dimana saya menggabungkan line pada `feature2-add-description` dan `feature1-add-title` dengan cara incoming first. Lalu, saya melakukan commit dan merge kedua feature ke branch `development`
    ![merging](/src/docs/image-9.png)
    ![no-fast-forward](/src/docs/image-10.png)
