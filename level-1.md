@@ -48,7 +48,7 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
    ```
    Setelah itu, perubahan akan muncul pada remote
    ![Branch on remote](/src/docs/image-2.png)
-3. Seluruh kegiatan dibawah dilakukan pada branch development, berikut adalah contoh implementasi pada local tentang command-command git yang berkaitan
+3. Seluruh kegiatan dibawah dilakukan pada branch `development`, berikut adalah contoh implementasi pada local tentang command-command git yang berkaitan
 - Pull
   
   Pull digunakan untuk mengambil konten dari remote dan melakukan update pada local untuk mencocokkan konten tersebut, command yang digunakan adalah
@@ -97,4 +97,15 @@ Implementasi dari branching sendiri dapat dilakukan sebagai berikut
   
   Push adalah command untuk menyimpan perubahan dari local changes ke remote changes
   ![push](/src/docs/image-4.png)
-1. 
+  
+4. Implemetasi git conflict dapat dilakukan dengan step by step sebagai berikut
+
+- Membuat perubahan pada masing-masing feature pada line yang sama, disini saya merubah line pada `src/example_app/views.py` menjadi `print('Hello from feature1')` pada `feature1-add-title` dan `print('Hello from feature2')` pada `feature2-add-description`, yang mana ketika di-merge akan menghasilkan error.
+  ![conflict](/src/docs/image-7.png)
+- Error terjadi dikarenakan saya melakukan push terlebih dahulu pada file dari `feature1-add-title` ke `development`, dan dikarenakan adanya perubahan pada baris yang sama pada `feature1-add-title` dengan `feature2-add-description`, maka terjadi conflict ketika `feature2-add-description` di merge ke `development`
+  ![resolve](/src/docs/image-8.png)
+   
+
+5. Untuk melakukan merge secara no fast forward atau `--no-ff` maka saya perlu meresolve conflict, dimana saya menggabungkan line pada feature2 dan feature1 dengan cara incoming first. Lalu, saya melakukan commit dan merge kedua feature ke branch development
+   ![merging](/src/docs/image-9.png)
+   ![no-fast-forward](/src/docs/image-10.png)
